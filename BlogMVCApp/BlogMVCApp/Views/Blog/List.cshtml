@@ -1,0 +1,15 @@
+﻿@model IEnumerable<BlogMVCApp.Models.BlogModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Blog List</h2>
+
+
+@Html.Partial("BlogList")
+
+@section RightColumn {
+    @Html.Partial("Search")
+    @{Html.RenderAction("CategoryList", "Category"); }
+}
+
